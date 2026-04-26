@@ -3,11 +3,11 @@ pipeline {
 
   environment {
     // 定义环境变量
-    COMPONENTS = ['None','nginx']
+    
   }
 
   parameters {
-    choice(name: 'Component', choices: ${env.COMPONENTS}, description: '要构建的环境组件')
+    choice(name: 'Component', choices: ['None','Nginx'], description: '要构建的环境组件')
   }
 
   stages {
