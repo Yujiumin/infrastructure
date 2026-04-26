@@ -1,11 +1,6 @@
 pipeline {
   agent any
 
-  environment {
-    // 定义环境变量
-    
-  }
-
   parameters {
     choice(name: 'Component', choices: ['None','Nginx'], description: '要构建的环境组件')
   }
