@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>404 - 资源未找到</title>
+    <title>403 - 访问被拒绝</title>
     <style>
       * {
         margin: 0;
@@ -39,7 +39,7 @@
       .code {
         font-size: 5rem;
         font-weight: 700;
-        color: #cbd5e1;
+        color: #f97316;
         letter-spacing: 0.05em;
         margin-bottom: 1rem;
         line-height: 1;
@@ -85,7 +85,6 @@
         transform: scale(0.97);
       }
 
-      /* 极简分隔装饰 */
       .divider {
         width: 48px;
         height: 2px;
@@ -94,7 +93,6 @@
         border-radius: 2px;
       }
 
-      /* 辅助提示轻量化 */
       .hint {
         font-size: 0.75rem;
         color: #94a3b8;
@@ -106,15 +104,15 @@
   </head>
   <body>
     <div class="container">
-      <div class="code">404</div>
-      <h1>资源未找到</h1>
+      <div class="code">403</div>
+      <h1>访问被拒绝</h1>
       <div class="divider"></div>
       <div class="message">
-        抱歉，您请求的页面或文件不存在。<br />
-        请检查链接地址是否正确。
+        抱歉，您没有权限访问此页面或资源。<br />
+        请确认您的账号权限或联系管理员。
       </div>
       <a href="/" class="home-link" id="homeLink"> <span>←</span> 返回首页 </a>
-      <div class="hint">若您认为这是站点错误，请联系管理员</div>
+      <div class="hint">若您认为这是误判，请联系管理员授予访问权限</div>
     </div>
 
     <script>
@@ -126,8 +124,8 @@
           window.location.href = '/';
         });
       }
-      // 可选: 控制台友好提示
-      console.log('404: 请求的资源不存在');
+      // 控制台友好提示
+      console.log('403: 访问权限不足');
     </script>
   </body>
 </html>
